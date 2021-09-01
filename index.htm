@@ -1,0 +1,40 @@
+<!doctype html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Media e resize</title>
+    <meta name="description" content="Teste de media">
+    <meta name="author" content="Renato Bertizini">
+
+    <meta property="og:title" content="Teste de media">
+    <meta property="og:type" content="Website">
+    <meta property="og:url" content="#">
+    <meta property="og:description" content="Teste de configurações media com resize">
+
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+
+    <div id="box-master" class="box-1">
+        <span id="dimensions" class="text-1"></span>
+    </div>
+
+    <script>
+        window.onresize = displayWindowSize;
+        window.onload = displayWindowSize;
+
+        function displayWindowSize() {
+            myWidth = window.innerWidth;
+            myHeight = window.innerHeight;
+            // your size calculation code here
+            document.getElementById("dimensions").innerHTML = myWidth + "x" + myHeight;
+        };
+    </script>
+</body>
+
+</html>
